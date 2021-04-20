@@ -196,17 +196,17 @@ typedef enum {
 
 #if MAKEABLE_REVISION == MAKEABLE_REVISION_0_1
 
-#define PIN_NC              NC
+#define PIN_NC              P0_17
 
-#define PIN_SERIAL_TX       NC
-#define PIN_SERIAL_RX       NC
+#define PIN_SERIAL_TX       PIN_NC
+#define PIN_SERIAL_RX       PIN_NC
 
-#define PIN_I2C_SDA         NC
-#define PIN_I2C_SCL         NC
+#define PIN_I2C_SDA         PIN_NC
+#define PIN_I2C_SCL         PIN_NC
 
 #define PIN_JACDAC_DATA     P0_12
 
-#define PIN_STATUS_LED      NC
+#define PIN_STATUS_LED      PIN_NC
 
 #define PIN_LEDR            P0_14
 #define PIN_LEDG            P0_15

@@ -127,7 +127,6 @@ namespace codal
             MicroBitI2C                 i2c;
             NRF52FlashManager           internalFlash; 
             MicroBitStorage             storage;                // Persistent key value store
-            Button                      buttonA;
             MicroBitRadio               radio;
             MicroBitThermometer         thermometer;
 

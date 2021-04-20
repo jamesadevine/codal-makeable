@@ -117,7 +117,6 @@ namespace codal
             NRF52Pin          vbusSense;
             NRF52Pin          cc1;
             NRF52Pin          cc2;
-            NRF52Pin          reset;
             NRF52Pin          nc;
             NRF52Pin&          irq1;
 

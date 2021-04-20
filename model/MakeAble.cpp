@@ -51,7 +51,6 @@ MakeAble::MakeAble() :
     i2c(PIN_I2C_SDA, PIN_I2C_SCL),
     internalFlash(MICROBIT_STORAGE_PAGE, 1, MICROBIT_CODEPAGESIZE),
     storage(internalFlash, 0),
-    buttonA(io.reset, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_LOW),
     radio(),
     thermometer()
 {
