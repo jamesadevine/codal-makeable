@@ -1,7 +1,7 @@
 MEMORY
 {
-  /** Location of mbr params page in flash. */
-  FLASH (rx) : ORIGIN = 0x26000, LENGTH = 0xD0000
+  SD (rx) : ORIGIN = 0x00000, LENGTH = 0x26000
+  FLASH (rx) : ORIGIN = 0x26000, LENGTH = 0x68000
   /* SETTINGS (rx) : ORIGIN = 0x7E000, LENGTH = 0x2000 */
   /* UICR (rx) : ORIGIN = 0x10001014, LENGTH = 0x8 */
   RAM (rwx) : ORIGIN = 0x20002030, LENGTH = 0x20020000 - 0x20002030
@@ -10,6 +10,11 @@ OUTPUT_FORMAT ("elf32-littlearm", "elf32-bigarm", "elf32-littlearm")
 ENTRY(Reset_Handler)
 SECTIONS
 {    
+    .softdevice :
+    {
+        KEEP(*(.softdevice))
+    } > SD
+
     .text :
     {
         KEEP(*(.isr_vector))
